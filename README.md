@@ -24,7 +24,8 @@
 
 ### Установка
 
-1. Клонируйте репозиторий:
+1. Клонируйте репозиторий
+2. Получите API ключ от [Together AI](https://together.ai)
+3.  Создайте .env файл и укажите в нём ваш ключ
 ```bash
-git clone https://github.com/ваш-username/llama-translator.git
-cd llama-translator
+TOGETHER_API_KEY=ВАШ_КЛЮЧ
