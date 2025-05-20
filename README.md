@@ -1,4 +1,4 @@
-# LLM Translator
+# LLM Переводчик
 
 ![Demo](test.gif) 
 
@@ -16,13 +16,8 @@
 - **Frontend**: Streamlit
 - **Модель**: Llama 4 Scout Instruct (17Bx16E)
 
-## Быстрый старт
 
-### Предварительные требования
-- Python 3.8+
-- API ключ от [Together AI](https://together.ai)
-
-### Установка
+### Установка и запуск
 
 1. Клонируйте репозиторий
 2. Получите API ключ от [Together AI](https://together.ai)
