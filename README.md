@@ -29,3 +29,9 @@ TOGETHER_API_KEY=ВАШ_КЛЮЧ
 ```bash
 python run.py
 ```
+
+## Авторы
+- [Горбунов Роман](https://github.com/romangorbunov91), R4160
+- [Иваненко Станислава](https://github.com/smthCreate), R4160
+- [Волынец Глеб](https://github.com/glebvol12), R4160
+- [Давыдов Игорь](https://github.com/TriglCr), R4197
