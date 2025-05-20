@@ -32,5 +32,5 @@ TOGETHER_API_KEY=ВАШ_КЛЮЧ
 ```
 4. Запуск
 ```bash
-TOGETHER_API_KEY=ВАШ_КЛЮЧ
+python run.py
 ```
