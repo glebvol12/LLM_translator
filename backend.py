@@ -46,7 +46,6 @@ async def translate_text(request: TranslationRequest):
         prompt = f"""
         Translate the following text from {request.source_language} to {request.target_language}.
         Return ONLY the translated text without ANY additional text, explanations or comments.
-
 Rules:
 - No introductory phrases
 - No explanations
@@ -56,6 +55,7 @@ Rules:
 - Keep all punctuation
 
 Text to translate:
+
 {request.text}
         """
         
@@ -66,7 +66,7 @@ Text to translate:
         
         translated_text = response.choices[0].message.content
         
-        return {"translated_text": translated_text, "model_used": "Llama-3-70b"}
+        return {"translated_text": translated_text}
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
