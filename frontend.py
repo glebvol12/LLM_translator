@@ -4,7 +4,7 @@ import time
 
 # --- Настройка страницы ---
 st.set_page_config(
-    page_title="Llama 4 Translator",
+    page_title="LLM Translator",
     layout="wide"
 )
 
@@ -58,7 +58,7 @@ def load_css():
 
 load_css()
 
-# --- Поддерживаемые языки ---
+#языки
 LANGUAGES = {
     "English": "English",
     "Spanish": "Spanish",
@@ -69,10 +69,10 @@ LANGUAGES = {
     "Japanese": "Japanese"
 }
 
-# --- Интерфейс ---
+#Интерфейс 
 st.markdown('<p class="header"></p>', unsafe_allow_html=True)
 
-# --- Блок выбора языков ---
+
 col1, col2 = st.columns(2)
 with col1:
     source_lang = st.selectbox(
@@ -90,7 +90,7 @@ with col2:
         index=4  # Russian по умолчанию
     )
 
-# --- Текстовые поля ---
+
 source_text = st.text_area(
     "Text to translate",
     height=200,
@@ -98,7 +98,7 @@ source_text = st.text_area(
     key="input_text"
 )
 
-# --- Кнопка перевода ---
+
 if st.button("Translate", key="translate_btn", use_container_width=True):
     if source_text:
         start_time = time.time()
@@ -139,7 +139,7 @@ if st.button("Translate", key="translate_btn", use_container_width=True):
     else:
         st.warning("Please enter some text to translate")
 
-# --- Футер ---
+
 st.markdown("---")
 st.markdown("""
 <div class="model-footer">

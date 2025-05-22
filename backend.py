@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from together import Together
 import os
-from dotenv import load_dotenv  # Добавьте этот импорт
+from dotenv import load_dotenv 
 from fastapi.middleware.cors import CORSMiddleware
 
 # Загружаем переменные окружения из .env
@@ -14,7 +14,7 @@ load_dotenv()
 
 app = FastAPI()
 
-# Настройка CORS
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -47,7 +47,7 @@ async def translate_text(request: TranslationRequest):
         Translate the following text from {request.source_language} to {request.target_language}.
         Return ONLY the translated text without ANY additional text, explanations or comments.
 
-### Rules:
+Rules:
 - No introductory phrases
 - No explanations
 - No notes
@@ -55,11 +55,10 @@ async def translate_text(request: TranslationRequest):
 - Just the pure translation
 - Keep all punctuation
 
-### Text to translate:
+Text to translate:
 {request.text}
         """
         
-        # Отправляем запрос
         response = client.chat.completions.create(
             model="meta-llama/Llama-4-Scout-17B-16E-Instruct",
             messages=[{"role": "user", "content": prompt}]
